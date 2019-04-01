@@ -6,3 +6,9 @@ export const getRandomInt = (min = 0, max = Number.MAX_SAFE_INTEGER) => {
 export const getRandomItem = (array) => array[getRandomInt(0, array.length - 1)];
 
 export const getRandomBoolean = () => Boolean(Math.round(Math.random()));
+
+export const createElement = (template = ``) => {
+  const templateElement = document.createElement(`template`);
+  templateElement.innerHTML = template;
+  return templateElement.content.firstElementChild;
+};
